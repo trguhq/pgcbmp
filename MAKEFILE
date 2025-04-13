@@ -1,13 +1,4 @@
-
-all:	pgctalk.exe pgcbmp.exe 
-
-pgctalk.exe:	pgctalk.c
-	pacc $<
+all:	pgcbmp.exe 
 
 pgcbmp.exe:	pgcbmp.c
 	pacc $<
-
-
-zip:	all
-	pkzip pgcbmp.zip pgctalk.c pgcbmp.c pgctalk.exe pgcbmp.exe
-	pkzip pgcbmp.zip README COPYING Makefile
